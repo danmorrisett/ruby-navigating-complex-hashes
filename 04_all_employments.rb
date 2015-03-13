@@ -171,3 +171,14 @@ crm = {
 #   Jane Otto
 #
 # ------- your code under here -----------
+
+
+
+
+crm[:people].each do |person|
+  puts "#{person[:first_name]} #{person[:last_name]}"
+  if !person[:employments].empty?
+    puts "   #{person[:employments][0][:title]} at company #{person[:employments][0][:company_id]} "
+  end
+
+end
